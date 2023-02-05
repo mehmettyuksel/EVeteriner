@@ -1,0 +1,348 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+html{
+    font-family:"Open Sans", sans-serif;
+}
+/*navbar başlangıç*/ 
+#navbar h1{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+}
+#navbar{
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0 0.75rem;
+    height: 70px;
+
+}
+#navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+#navbar ul li a{
+   position: relative;
+   display: inline-block;
+   padding: 0.75rem;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   overflow: hidden;
+   transition: 0.2s;
+}
+#navbar ul li a:hover{
+    color:#122e47;
+    background:#2196f3;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3,0 0 10px #2196f3,
+}
+#navbar ul li ul {
+	display:none;
+	position:absolute;
+	background:#3b7ca1;
+    width:200px;
+    border-radius: 7px;
+}
+#navbar ul li ul li {
+	display:block
+}
+#navbar ul li:hover > a {
+	background:#5ea7d1;
+}
+#navbar ul li ul li a {
+	background:#3b7ca1;
+	text-align:left
+}
+#navbar ul li ul li a:hover {
+	background:#64b8e9;
+}
+#navbar ul li:hover ul {
+	display:block
+}
+/*navbar bitiş*/
+
+/*veteriner png başlangıç*/ 
+.resim img{
+    position: absolute;
+    margin-top: 450px;
+    top: 10.5%;
+    left: 13%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 220px;
+}
+/*veteriner png bitiş*/
+
+/*animals png başlangıç*/
+.resim2 img{
+    position: absolute;
+    width: 430px;
+    height: 330px;
+    margin-top: 16rem;
+    right: 15px;
+}
+/*animals png bitiş*/
+
+ /*logo başlangıç*/
+.logo img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-top: -65px;
+    right: 79%;
+}
+/* logo bitiş*/
+/* saat başlangıç*/
+#clock{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top:70px;
+    right: 80px;
+    justify-content: center;
+    align-items: center;
+    
+}
+#clock h2{
+    position: relative;
+    display: block;
+    color: rgb(38, 87, 143);
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+}
+#clock #time {
+    display: flex;
+
+}
+#clock #time div{
+    position: relative;
+    margin: 0 5px;
+    -webkit-box-reflect:below 1px linear-gradient(transparent,#0004);
+}
+#clock #time div span {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 80px;
+    background: #1977c4;
+    color:#fff;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+}
+#clock #time div span:nth-child(2){
+    height: 30px;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    z-index: 9;
+    box-shadow: none;
+    background:#127fd6 ;
+    text-transform: uppercase;
+}
+#clock #time div:last-child span{
+background-color: #dd0760;
+}
+#clock #time div:last-child span:nth-child(2){
+    background-color: #ec0062;
+ }
+/* saat bitiş*/
+/*akordiyon menü başlangiç*/
+.middlee{
+    position: absolute;
+    top: 30%;
+    left: 13%;
+    transform: translate(-50%,-50%);
+
+}.menuu{
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.itemm{
+    border-top: 1px solid #4490bd;
+    overflow: hidden;
+}
+.btnn{
+    display: block;
+    padding: 16px 20px;
+    background: #3b7ca1;
+    color:white;
+}
+.btnn:hover{
+    color: rgb(6, 32, 71);
+    border-radius: 3px;
+}
+.btnn:before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #3b7ca1;
+    left: 20px;
+    bottom: 2.5px;
+    transform: rotate(45deg);
+
+}
+.btnn i{
+    margin-right:10px;
+}
+.smenu{
+    background:#333 ;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+.smenu a{
+    display: block;
+    padding: 16px 26px;
+    color:white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+}
+.smenu a:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background:#3498db;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.smenu a:hover :before{
+    opacity: 1;
+
+}
+.itemm:target .smenu{
+    max-height: 10em;
+}
+/*akordiyon menü bitiş*/
+
+/*kaydırmalı foto başlangıç*/ 
+.slider{
+    width: 850px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 35px;
+}
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slides input{
+   display: none;
+
+}
+.slide{
+    transition: 2s;
+    width: 20%;
+}
+.slide img{
+    width: 850px;
+    height: 500px;
+}
+.navigation-manuel{
+position: absolute;
+width: 830px;
+margin-top:-30px ;
+display: flex;
+justify-content: center;
+}
+.manuel-btn{
+    border:2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor:pointer;
+    transition: 1s;
+
+}
+.manuel-btn:not(:last-child){
+    margin-right:40px ;
+}
+.manuel-btn:hover{
+    background:#40D3DC;
+}
+#radio1:checked ~ .first{
+    margin-left:0 ;
+}
+#radio2:checked ~ .first{
+    margin-left:-20% ;
+}
+#radio3:checked ~ .first{
+    margin-left:-40% ;
+}
+#radio4:checked ~ .first{
+    margin-left:-60% ;
+}
+/* css for automatic navigation (otomatik ilerlemesi için)*/ 
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 830px;
+    justify-content: center;
+    margin-top: 470px;
+
+}
+.navigation-auto div{
+border: 2px solid white;
+padding: 5px;
+border-radius: 10px;
+transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC ;
+} 
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC ;
+} 
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC ;
+} 
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC ;
+} 
+/*kaydırmalı foto bitiş*/ 
+.mtn h2{
+    position: relative;
+    color:#1c4366;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+.mtn p{
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+}

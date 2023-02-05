@@ -1,0 +1,63 @@
+.logo img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-top: -65px;
+    right: 90%;
+}
+#clock{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top:70px;
+    right: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.middlee{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+
+}
+.menuu{
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slider{
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 35px;
+    margin-left: 300px;
+}
+.resim2 img{
+    position: absolute;
+    width: 320px;
+    height: 220px;
+    margin-top: 16rem;
+    right: 15px;
+}
+.resim img{
+    position: absolute;
+    margin-top: 410px;
+    top: 10.5%;
+    left: 11%;
+    transform: translate(-50%,-50%);
+    width: 270px;
+    height: 170px;
+}
+#clock{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top:70px;
+    right: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+}

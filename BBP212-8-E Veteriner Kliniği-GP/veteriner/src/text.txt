@@ -1,0 +1,66 @@
+<?php 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+				if($_POST){
+
+
+require 'src/Exception.php';
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
+					$isim=$_POST["isim"];
+					$email=$_POST["email"];
+					$telefon=$_POST["telefon"];
+					$konu=$_POST["konu"];
+					$mesaj=$_POST["mesaj"];
+					
+	$mail = new PHPMailer(true);
+
+try {
+    //Server settings
+             // Enable verbose debug output
+    $mail->isSMTP();  
+    $mail->Host       = 'mail.diyaframdesign.com';                    // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;
+	$mail->SMTPOptions = array(
+                        'ssl' => array(
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                        'allow_self_signed' => true
+                    )
+                );
+
+ //use SMTP authentication
+   
+    $mail->Username   = 'ferrosa@diyaframdesign.com';                     // SMTP username
+    $mail->Password   = 'Ferrosa2021!'; 
+	// SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+
+    //Recipients
+    $mail->setFrom('ferrosa@diyaframdesign.com', 'Mailer');
+	$mail->addAddress('ferrosacikolata@gmail.com', 'Admin');  
+    $mail->addAddress('emreeccelik@gmail.com', 'Admin');     // Add a recipient
+   
+
+    
+
+    // Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Website Iletisim Formu';
+    $mail->Body    = "Müşteri Ad Soyad: <b>".$isim."</b><br>
+ 					  Email: <b>".$email."</b><br>
+ 					  Telefonu: <b>".$telefon."</b><br>
+					  Konu: <b>".$konu."</b><br>
+					  Mesaj: <b>".$mesaj."</b><br>";
+    
+
+    $mail->send();
+   echo 'Mesajınız başarıyla iletildi.';
+} catch (Exception $e) {
+    echo "Mesajınız iletilemedi. Hata !";
+}
+					
+						
+				}
+				?>
